@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <style>
+        body {
+            background-color: #058b8b;
+            background-position-x: center;
+            background-repeat: no-repeat;
+
+
+        }
+
+        .navbar {
+            background-color: color(xyz-d65 0.06 0.09 0.12);
+            border-radius: 15px;
+            width: 1500px;
+            height: 70px;
+            position: fixed;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            display: inline-block;
+            list-style: none;
+            margin: 6px 40px;
+        }
+
+        .navbar li a {
+            font-size: 27px;
+            color: white;
+            padding: 1.5px 1.5px;
+            text-decoration: none;
+            color: hsl(180, 6%, 13%);
+        }
+
+        .navbar li a:hover {
+            color: rgb(93, 162, 185);
+        }
+
+        .search {
+            float: right;
+            padding: 5px 25px;
+        }
+
+        .navbar input {
+
+            border: 1px solid black;
+            border-radius: 35px;
+            padding: 1px;
+            height: 22px;
+            width: 260px;
+            margin-right: 5px;
+            font-size: 15px;
+        }
+
+        .navbar li a {
+            color: white;
+        }
+
+        .Home {
+            padding-left: 7.5px;
+        }
+
+        .my {
+            float: left;
+            font-size: 23px;
+            margin: 18px 25px;
+            font-family: cursive;
+            font-weight: bold;
+            border: 2px solid white;
+            border-radius: 5px 10px;
+            background-color: white;
+            color: rgb(19, 18, 18);
+
+        }
+
+        .image {
+            float: right;
+            margin-left: 1px;
+            padding-left: 1px;
+        }
+
+        ::placeholder {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .singer {
+            float: left;
+            width: 550px;
+            height: 750px;
+            margin-left: 76px;
+            margin-top: 60px;
+        }
+
+        .favt {
+            float: right;
+            font-size: 80px;
+            color: white;
+            margin-top: 100px;
+            margin-left: 75px;
+            width: 495px;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .prefer2 {
+            color: white;
+            font-size: 30px;
+            margin-top: 1px;
+        }
+
+        .container2 {
+            margin-right: 100px;
+        }
+
+        .ranbir {
+            margin: 125px 220px;
+            float: right;
+            height: 600px;
+        }
+
+        .short {
+            float: left;
+            font-size: 70px;
+            color: white;
+            margin-top: 100px;
+            margin-left: 140px;
+            width: 495px;
+            text-align: left;
+            font-style: italic;
+        }
+
+
+        .play {
+            font-size: 30px;
+            margin-top: 1px;
+        }
+
+        .podcasts {
+            margin: 30px 125px;
+            float: left;
+            height: 800px;
+        }
+
+        .millions {
+            float: right;
+            font-size: 100px;
+            color: white;
+            margin-top: 115px;
+            margin-right: 140px;
+            width: 495px;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .languages {
+            font-size: 30px;
+            margin-top: 1px;
+        }
+
+
+        /* for cards */
+        .main {
+            display: inline-block;
+            margin-left: 70px;
+
+        }
+
+        .cards {
+            overflow: hidden;
+            width: 250px;
+            height: 300px;
+            position: relative;
+            background-color: rgb(48, 46, 46);
+            border-radius: 20px;
+            margin: 10px 40px;
+            margin-bottom: 40px;
+            box-shadow: 2px 2px 10px black;
+            display: inline-block;
+            transition: transform 0.3s;
+            transition: all 0.3s;
+            border: 8px solid rgb(65, 63, 63);
+
+        }
+
+        .cards:hover {
+
+            transform: scale(1.10);
+
+        }
+
+        .image img {
+            width: 250px;
+            height: 300px;
+            border-radius: 15px;
+            object-fit: cover;
+
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+        }
+
+        .desc {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: -100%;
+            position: absolute;
+
+            background-color: rgba(87, 86, 86, 0.135);
+            transition: 0.1s;
+            margin-bottom: 50px;
+            float: right;
+
+        }
+
+        .cards:hover .desc {
+            right: 0%;
+        }
+
+        button {
+            margin-top: 270px;
+            margin-right: 10px;
+            float: right;
+
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+
+        }
+
+        .main {
+            background-color: #012529;
+            margin: 50px 50px;
+            border-radius: 25px;
+
+        }
+
+        button:hover {
+            background: #000;
+            color: white;
+            transform: scale(1.08);
+        }
+
+        .card_title {
+            font-size: 25px;
+            color: #fb5b16;
+
+
+        }
+
+        .high {
+            background-color: #00000057;
+            border-radius: 20px;
+
+        }
+
+        .footer {
+            border: 2px solid;
+            border-radius: 15px;
+            color: white;
+            background-color: #0c0c0c;
+
+
+        }
+
+        .ft1 {
+            border: 2px solid black;
+        }
+
+        h2 {
+            color: white;
+            margin-left: 20px;
+        }
+
+        .punjabi {
+            margin-top: -30px;
+        }
+
+        .punjabi_singer {
+            margin-top: 245px;
+            margin-right: 20px;
+            color: white;
+
+
+
+        }
+
+        #blur {
+            backdrop-filter: blur(5px);
+
+        }
+
+        .podcasts_para {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: 800;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .podcasts_button {
+            margin-top: 45px;
+        }
+
+        .ted_button {
+            margin-top: 35px;
+        }
+
+        .ranveer_button {
+            margin-top: -1px;
+        }
+
+        .mahabharat_button {
+            margin-top: 80px;
+        }
+
+        .about_us {
+            width: 50%;
+            display: flex;
+
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 25%;
+        }
+
+        .contact {
+            display: inline-block;
+            margin-left: 40%;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+            padding-left: 6px;
+
+        }
+
+        .contact a img {
+            width: 35px;
+        }
+
+        .copy {
+            background-color: #000;
+        }
+
+        .footer_copy {
+            color: rgb(78, 77, 77);
+            margin-left: 37%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="my">ᗰYᗰᑌᔕIᑕ</div>
+            <ul>
+
+                <li class="Home"><a href="#singer">Home</a></li>
+                <li><a href="#cards">Album</a></li>
+                <li><a href="#podcasts">Podcasts</a></li>
+                <li><a href="#footer">About us</a></li>
+
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="search here">
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container2">
+        <div class="favt">Listen to your favourite <p class="prefer2"> Listen to your favourite singer's songs and
+                interviews...</p>
+        </div>
+        <img class="singer" id="singer" src="singer.png" alt="image" height="500px" width="1000px">
+    </div>
+    <div>
+        <video class="ranbir" autoplay loop muted>
+            <source src="ranbir kapoor.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="short">Audio and Video <p class="play"> play your favourite song with high quality short videos...</p>
+    </div>
+    <div>
+        <video class="podcasts" autoplay loop muted>
+            <source src="podcasts.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="millions">Millions of songs <p class="languages"> mymusic provide millions of songs and podcasts in 20+
+            different languages....</p>
+    </div>
+
+    <!-- for cards -->
+
+    <div class="main" id="cards">
+        <h2>Top of Artists</h2>
+        <div class="cards" id="card1">
+            <div class="image">
+                <img src="arjit top.png" alt="">
+            </div>
+            <div class="desc">
+                <button>Play Now</button>
+
+            </div>
+        </div>
+
+
+
+        <div class="cards">
+            <div class="image">
+                <img src="kk (2).png" alt="">
+            </div>
+            <div class="text">
+
+            </div>
+            <div class="desc">
+                <button>Play Now</button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="image">
+                <img src="sonu nigam.png" alt="">
+            </div>
+            <div class="text">
+
+            </div>
+            <div class="desc">
+                <button>Play Now</button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="image">
+                <img src="diljit dosanjh.png" alt="">
+            </div>
+            <div class="text">
+
+            </div>
+            <div class="desc">
+
+                <button>Play Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" id="cards">
+        <h2>Top HITS</h2>
+        <div class="cards" id="card1">
+            <div class="image">
+                <img src="top punjabi.png" alt="">
+            </div>
+            <div class="desc" id="blur">
+                <p class="punjabi_singer">Shubh, Sidhu Moose Wala, AP Dhillon...</p>
+                <button class="punjabi">Play Now</button>
+
+            </div>
+        </div>
+
+
+
+        <div class="cards">
+            <div class="image">
+                <img src="top 2000's.png" alt="">
+            </div>
+            <div class="desc" id="blur">
+                <p class="punjabi_singer">Mohit Chauhan, Shaan, K.K, Sonu Nigam...</p>
+                <button class="punjabi">Play Now</button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="image">
+                <img src="top bollywood.png" alt="">
+            </div>
+            <div class="desc" id="blur">
+                <p class="punjabi_singer">Arijit Singh, Jubin Nautiyal, Armaan Malik...</p>
+                <button class="punjabi">Play Now</button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="image">
+                <img src="top international.png" alt="">
+            </div>
+            <div class="desc" id="blur">
+                <p class="punjabi_singer">Justin Bieber, Ed Sheeran, Katy Perry...</p>
+                <button class="punjabi">Play Now</button>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    <div class="main">
+        <h2>Podcasts</h2>
+        <div class="cards" id="card1">
+            <div class="image" id="podcasts">
+                <img src="the seen.png" alt="">
+            </div>
+            <div class="desc" id="blur">
+
+                <h2 style="font-weight: 800; color: #000;">The Seen and the Unseen</h2>
+                <p class="podcasts_para">
+                    hosted by Amit Varma, features longform conversations that aim to give deep insights into the
+                    sunjects being discussed. Timeless and bingeworthy.
+                </p>
+                <button class="podcasts_button">Play Now</button>
+
+            </div>
+        </div>
+
+
+
+        <div class="cards">
+            <div class="image">
+                <img src="ranveer.png" alt="">
+            </div>
+
+            <div class="desc" id="blur">
+
+                <h2 style="font-weight: 800; color: #000;">The Ranveer Show</h2>
+                <p style="color: white;" class="podcasts_para">
+                    Every episode has been designed to bring you some kind of value add.Life is a never ending self
+                    improvement game.Each episode will change you up in some way.all kinds of motivational human
+                    beings-featured on india's smartest podcast.
+                </p>
+                <button class="ranveer_button">Play Now</button>
+
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="image">
+                <img src="ted.png" alt="">
+            </div>
+
+            <div class="desc" id="blur">
+
+                <h2 style="font-weight: 800; color: #000;">TED talks Daily</h2>
+                <p style="color: white;" class="podcasts_para">
+                    Every weekday,TED Talks Daily brings you the latest talks in audio.With TED Talks Daily,find some
+                    space in your day to change your perspectives,ignite your curiosity,and learn something new.
+                </p>
+                <button class="ted_button">Play Now</button>
+
+            </div>
+        </div>
+        <div class="cards">
+            <div class="image">
+                <img src="mahabharat.png" alt="">
+            </div>
+
+            <div class="desc" id="blur">
+
+                <h2 style="font-weight: 800; color: #000;">The Stories of Mahabharat</h2>
+                <p style="color: white;" class="podcasts_para">
+                    hosted by Sudipta Bhawmik, A serialized story-telling of the ancient epic of India-The Mahabharat
+                    Hosted on Acast.
+                </p>
+                <button class="mahabharat_button">Play Now</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer" id="footer">
+
+        <div class="about_us">
+            <h2 style="margin-left: 40%; margin-right: 25%; margin-bottom: 0px;">About us</h2>
+            <p>Our music player company is dedicated to delivering a seamless and personalized platform, where you can
+                immerse yourself in the world of music.With a vast collection of tracks from every genre
+                imaginable,MYMUSIC ensuring there's something for everyone to enjoy.Our user-friendly interface and
+                advanced features make navigation effortless.
+                By choosing us,you join a community that cherishes the essence of music and its enduring poweer to unite
+                souls worldwide.</p>
+        </div>
+        <hr width="1000px" color="grey">
+        <div class="contact">
+
+            <a href="https://www.gmail.com"><img src="gmail.png" alt="" srcset=""></a>
+            <a href="https://www.facebook.com"><img src="facebook.png" alt="" srcset=""></a>
+            <a href="https://www.instagram.com"><img src="instagram.png" alt="" srcset=""></a>
+            <a href="https://www.youtube.com"><img src="youtube.png" alt="" srcset=""></a>
+            <a href="https://www.twitter.com"><img src="twitter.png" alt="" srcset=""></a>
+
+        </div>
+        <div class="copy">
+            <p class="footer_copy">Copyright &copy; 2023 MYMUSIC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
